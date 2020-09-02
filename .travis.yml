@@ -17,7 +17,12 @@ script:
 deploy:
   provider: releases
   api_key: '$GITHUB_API_KEY'
-  file: 'target/debug/polar_send_training.exe'
+  file: 
+    - 'target/debug/polar_send_training.exe'
+    - 'target/debug/polar_send_training'
   on:
     repo: slysherz/polar-send-training
   skip_cleanup: 'true'
+branches:
+  only: 
+    - master
