@@ -16,8 +16,7 @@ script:
 - cargo build --verbose --workspace
 deploy:
   provider: releases
-  api_key:
-    secure: V+eLZSNE8hmohda/F9AgnzNLAAykWVztJ+oOU397iORD1CpLV48vjuEh/a+jtLPobRfoshbK/g4sGr1DeRH141y1SwfG5BEBeo2E1Se4JqrUaC1EcHN/Tjm+durQJx/Z1fW4jWgPgIS91patj5bPxpx9K0PM0yxlz+s3rd6UhMLhRa/bhDtt5oOdlQ8/IWPa/aRY2boPBmdFNgWRfDSIv467jLpAh3QvVWgehtyU44J6x1GrJ7dpJBGXBvdZxPJkln7f4VdM5kGv5Lkn9q0nyRg6zqRHmymf0C/fZI3ld6zYzcPGvRmw7sqfEY8MrU2uNAlDmiPvTc6gnZ7eXwkVFG/oh1+AnCdVmm89azQaRSlZiiPc0hn1pAVYMXhYAYLDTGhLHQ9gq/5J0OA+bKzeIoAmHEzi953GFoy9isLb+xHFQXofSo1gwL3I48TrVyHE3U37zBeft7rqGfE/A2Dy4IFZYZL3mLh/FaZDL3RBVD5cR8pl42i5/1HmEP0WWl/ZnuaC6ycjD+16+T8iNaHBPFDSvFEtFNIpn/ygXweJR0VbYvuuY+JAkSI3uvfe58Nb2bhcBm+9eJSO6G3XuDmoNrubZm0Iwhk5d3RolJbhifNSWK/xofskCoPqsljpWuDUqFhYaVlFwetxobR75U0EVk8trxmgw2d02Jf6A3Z7foQ=
+  api_key: '$GITHUB_API_KEY'
   file: 'target/debug/polar_send_training.exe'
   on:
     repo: slysherz/polar-send-training
